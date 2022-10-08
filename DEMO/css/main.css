@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('../fonts/CormorantInfant-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('../fonts/CormorantInfant-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('../fonts/CormorantInfant-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+html, body, body div, div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, img, s, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, button, form, fieldset, article, aside, footer, header, main, nav, section, input, textarea, select, option {
+    margin: 0;
+    padding: 0;
+}
+
+html * {
+    max-height: 1000000px;
+}
+
+html {
+    height: 100%;
+    }
+
+body {
+    font: normal 500 16px/26px 'Cormorant Infant';
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+header {
+    border-bottom: 2px ridge #4169E1;
+    background: #4682B4;
+    height: 50px;
+    text-align: center;
+    padding-top: 18px;
+    flex: none;
+    font: normal 500 30px/40px 'Cormorant Infant';
+}
+footer {
+    border-top: 2px ridge #4169E1;
+    height: 70px;
+    line-height: 70px;
+    background: #191970;
+    text-align: center;
+    flex: none;
+}
+.white {
+    color: #fff;
+}
+
+main {
+    flex: 1 1 100%; 
+    background-image: linear-gradient(to bottom, #E0FFFF 50%, #AFEEEE 70%);
+ }
+ 
+ h1 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 300;
+    margin: 10px 0 75px;
+    text-align: center;
+ }
+ main img {
+    margin: 50px 20px 0 50px;
+    width: 170px;
+    height: 350px;
+    border-radius: 10%;
+    float: left;
+    border: 2px outset #4169E1;
+ }
+ .photo {
+     margin: 50px 0px 10px 100px;
+     }
+ .medium {
+     margin: 0 150px 30px 300px;
+     text-align: left;
+     font-size: 18px;
+     padding: 0 50px 50px 75px;
+     line-height: 30px;
+ }
