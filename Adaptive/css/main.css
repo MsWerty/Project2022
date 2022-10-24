@@ -1,0 +1,955 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* global reset */
+html, body, body div, div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, img, s, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, button, form, fieldset, article, aside, footer, header, main, nav, section, input, textarea, select, option {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+html * {
+    max-height: 1000000px;
+}
+
+/* common */
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+p {
+    color: #1f3f68;
+    opacity: 0.6;
+}
+h2 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* structure */
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    font: normal 400 16px/26px 'Roboto';
+    letter-spacing: 0.05em;
+}
+header {
+    height: 116px;
+    flex: none;
+    position: relative;
+    z-index: 1;
+}
+footer {
+    height: 657px;
+    background: #316099;
+    flex: none;
+}
+main {
+    flex: auto;
+    margin-top: -116px;
+}
+
+/* header */
+header .container {
+    height: 48px;
+    padding: 34px 0;
+}
+.logo {
+    float: left;
+    width: 46px;
+    height: 48px;
+    background: url('../images/logo.png') center center no-repeat;
+}
+.user {
+    float: right;
+    width: 34px;
+    height: 48px;
+    background: url('../images/user.png') center center no-repeat;
+}
+
+/* footer */
+.liner {
+    height: 0;
+    border-top: 1px solid rgba(255,255,255,.4);
+}
+footer button {
+    float: right;
+    background: #5a98d0;
+    height: 56px;
+    width: 237px;
+    color: #fff;
+    letter-spacing: 0.04em;
+    margin: 100px 0 106px 408px;
+}
+footer .container {
+    padding: 64px 0;
+    overflow: hidden;
+}
+footer h2 {
+    color: #fff;
+    text-align: left;
+    margin: 27px 0 32px;
+}
+footer p {
+    color: #fff;
+}
+ol + p {
+    opacity: 0.4;
+}
+ol {
+    list-style-type: upper-alpha;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 60px 22px;
+}
+ol li {
+    width: 336px;
+}
+ol li::before {
+    width: 20px;
+    height: 30px;
+    float: left;
+    content: '';
+}
+
+/* main */
+.container1 {
+    height: 768px;
+    background: linear-gradient(0deg, #EBF3FB 0%, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+.container1 .container {
+    padding: 183px 0px 94px;
+    height: 491px;
+    background: url('../images/ilus.png') right 183px no-repeat;
+}
+main h1{
+    height: 148px;
+    width: 510px;
+    font: normal 300 64px/74px 'Roboto';
+    color: #1F3F68;
+    letter-spacing: 0.04em;
+    margin-top: -35px;
+}
+main p {
+    width: 425px;
+    height: 82px;
+    font: normal 400 16px/26px 'Roboto';
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    margin-top: 32px;
+}
+main h2 {
+    width: 1140px;
+    height: 41px;
+    margin: 64px auto 32px;
+    font: normal 300 36px/46px 'Roboto';
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+main button {
+    width: 220px;
+    height: 56px;
+    background: #5A98D0;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+    font: normal 400 16px/26px 'Roboto';    
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    margin-top: 71px;
+}
+.container2 {
+    display: flex;
+    gap: 32px;
+    align-items: center; 
+    justify-content: center;
+    flex-flow: wrap;
+}
+.threephoto {
+    width: 359px;
+    height: 480px;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    padding: 44px 32px;
+} 
+h4 {
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    font: normal 400 20px/30px 'Roboto';
+}
+.container2 p {
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+    font: normal 400 16px/26px 'Roboto';
+}
+.threephoto>div {
+    width: 283px;
+    height: 220px;
+    padding: 44px 32px;
+}
+.container2 a {
+    width: 120px;
+    display: inline-block;
+    font: normal 400 14px/30px 'Roboto';
+    letter-spacing: 0.05em;
+    color: #5A98D0;
+    margin: 30px 207px 44px 0px; 
+}
+.man1 {
+    margin: 44px 109px 7px 70px;
+}
+.man2 {
+    margin: 44px 109px 7px 115px;
+}
+.girl {
+    margin: 50px 109px 7px 70px;
+}
+.cont3 {
+    width: 750px;
+    height: 52px;
+    font: normal 400 16px/26px 'Roboto';
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #222222;
+    margin: 32px 308px 64px 308px;
+ }
+.grid {
+    display: grid;
+    gap: 32px;
+    margin-bottom: 112px;
+    justify-content: center;
+    grid-template-areas: "m1 m1" "m2 m3";
+    
+}
+.mask1 p {
+    font: normal 400 32px/46px 'Roboto';
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-align: right;
+    margin: 64px 64px auto auto;
+}
+.mask1 {
+    width: 1140px;
+    height: 480px;
+    border-radius: 10px;
+    background: url('../images/Mask Group.png') no-repeat;
+    grid-area: m1;
+}
+.mask2 p {
+    font: normal 400 28px/46px 'Roboto';
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 32px 339px auto 32px;
+}
+.mask2 {
+    width: 554px;
+    height: 417px;
+    border-radius: 10px;
+    background: url('../images/Mask Group2.png') no-repeat;
+    grid-area: m2;
+}
+.mask3 {
+    width: 554px;
+    height: 417px;
+    border-radius: 10px;
+    background: url('../images/Mask Group3.png') no-repeat;
+    grid-area: m3;
+    
+}
+.mask3 p {
+    font: normal 400 28px/46px 'Roboto';
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 32px 264px 339px 32px;
+} 
+    
+
+/* Contact us*/
+
+
+
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 379px;
+    background: url('../images/start.png') center 129px no-repeat;
+    background-size: cover;
+    margin-bottom: 57px;
+    
+}
+.start h2{
+    width: 235px;
+    height: 74px;
+    margin: 185px 0px 16px 0px;
+    font: normal 500 44px/74px 'Roboto';
+    letter-spacing: 0.04em;
+    color: #FFFFFF;;
+}
+.start p{
+    width: 780px;
+    height: 60px;
+    margin-top: 0px;
+    margin-bottom: 44px;
+    font: normal 400 20px/30px 'Roboto';
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+.contact{
+    display: grid;
+    gap: 101px;
+    height: 800px;
+    grid-template-columns: 301px 540px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 212px;
+    margin-right: 212px;
+    margin-bottom: 96px;
+}
+.address{
+    width: 301px;
+    height: 668px;
+    background: url('../images/Group.png') top no-repeat;
+}
+.address h3{                        
+    font: 500 20px/30px 'Roboto';
+    color: #1F3F68;
+    letter-spacing: 0.04em;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+.address h3:first-child {
+    margin-top: 220px;
+}
+.address p:nth-last-of-type(2) {
+    margin-top: 0px;
+}
+.address p:nth-last-of-type(1) {
+    margin-top: 16px;
+}
+.address p {
+    font: 300 16px/26px 'Roboto';
+    color: #1F3F68;
+    letter-spacing: 0.04em;
+    opacity: 0.6;
+}
+.address li {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    opacity: 0.6;
+}
+.address ul {
+    list-style: none;
+    display: inline-block;
+}
+.address a {
+    display: inline-block;
+    height: 40px;
+}
+.tel::before {
+    display: inline-block;
+    background-size: 26px;
+    width: 24px;
+    height: 24px;
+    padding-left:40px;
+    opacity: 0.6;
+}
+.cite{
+    display: inline-block;
+    height: 26px;
+    width: 200px;
+    font-weight: 300px;
+    color: #1F3F68;
+    text-decoration: none;
+    text-align: left;
+}
+.cite::before{
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-right: 16px;
+}
+.mail{
+    display: inline-block;
+    height: 26px;
+    width: 200px;
+    font-weight: 300px;
+    color: #1F3F68;
+    text-decoration: none;
+    text-align: left;
+}
+.mail::before{
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+.send{
+    height: 800px;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    padding: 0px 56px 0px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.send h3{
+    font: 500 20px/30px 'Roboto';
+    text-align: left;
+    color: #1F3F68;
+    margin: 56px 0px 16px 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+form{
+    display: block;
+    width: 428px;
+    height: 610px;
+}
+.send label{
+    display: block;
+    font: 400 16px/30px 'Roboto';
+    color: #1F3F68;
+    opacity: 0.8;
+    margin: 32px 0px 8px;
+}
+.send .text{
+    display: block;
+    width: 428px;
+    height: 72px;
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    padding: 20px 35px;
+    border-radius: 10px;
+    font: 300 16px/30px 'Roboto';
+    color: #1F3F68;
+    opacity: 0.2;
+}
+.send .message{
+    display: block;
+    width: 428px;
+    height: 144px;
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    padding: 20px 35px;
+    border-radius: 10px;
+    font: 300 16px/30px 'Roboto';
+    color: #1F3F68;
+    opacity: 0.2;
+}
+.send button{
+    display: block;
+    width: 428px;
+    height: 72px;
+    margin-top: 72px;
+    font: 500 16px/26px 'Roboto';
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    text-transform: uppercase;
+}
+
+.navigator{
+    height: 480px;
+    background: url('../images/map.png') center no-repeat;
+    margin-bottom: 112px;
+}
+
+/* adaptive */
+@media screen and (max-width:1204px) {
+    .container {
+        width: auto;
+        margin: 0 32px;
+    }
+    .container1 {
+        height: 768px;
+}
+    .container1 .container {
+        padding: 0px 0 150px;
+        height: 472px;
+}
+    main h1 {
+        width: 506px;
+        height: 148px;
+        text-align: left;
+        letter-spacing: 0.04em;
+        margin-top: 188px;
+}
+    main p {
+        width: 425px;
+        height: 82px;
+        letter-spacing: 0.05em;
+        margin-top: 32px;
+}
+    main h2 {
+        width: 341px;
+        height: 55px;
+        padding: 0px;
+        font: normal 300 24px/28px 'Roboto';
+        text-align: center;
+    }
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px; 
+}
+    .threephoto {
+        width: 335px;
+        height: 448px;
+}
+    .threephoto>div {
+        width: 275px;
+        height: 215px;
+        padding: 30px;
+}
+    .man1 {
+        margin: 40px 105px 0px 60px;
+}
+    .man2 {
+        margin: 40px 105px 0px 96px;
+}
+    .girl {
+        margin: 40px 105px 0px 68px;
+}
+    .cont3 {
+        width: 520px;
+        height: 78px;
+        text-align: center;
+}
+    .grid {
+        display: grid;
+        gap: 32px;
+        margin-bottom: 112px;
+        justify-content: center;
+        grid-template-areas: "m1 m1" "m2 m3";
+    
+}
+    .mask1 {
+        width: 705px;
+        height: 297px;
+        border-radius: 10px;
+}
+    .mask2 {
+        width: 336px;
+        height: 253px;
+        border-radius: 10px;
+        grid-area: m2;
+}
+    .mask3 {
+        width: 336px;
+        height: 253px;
+        border-radius: 10px;
+        grid-area: m3;
+    
+}
+   
+    footer {
+        height: 654px;
+    }
+    footer .container {
+        padding: 64px 92px;
+    }
+    footer button {
+        height: 32px;
+        width: 133px;
+        margin: 95px 0 65px 0;
+    }
+    footer h2 {
+        width: 336px;
+        margin: -16px 0 22px;
+    }
+    footer p {
+        width: 336px;
+    }
+    ol {
+        display: block;
+        margin-bottom: 53px;
+    }
+    ol li {
+        width: auto;
+        margin-bottom: 19px;
+    }
+    ol li::before {
+        height: 10px;
+        width: 40px;
+    }
+    /*contact us*/
+    
+    .start{
+    height: 349px;
+    background-size: cover;
+    margin-bottom: 40px;
+    
+}
+    .start h2{
+    width: 520px;
+    height: 74px;
+    margin: 149px 124px 16px 124px;
+}
+    .start p{
+    width: 520px;
+    height: 90px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+    .contact{
+    display: grid;
+    gap: 32px;
+    height: 1520px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a " "s";
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 64px;
+}
+    .address{
+    height: 740px;
+    grid-area: a;
+}
+    .address h3{                        
+    margin: 24px 0px 24px 0px;
+}
+
+    .address p{                        
+    margin: 0px 0px 0px 0px;
+}   
+    main .send{
+    height: 780px;
+    padding: 0px 50px 0px;
+    grid-area: s;
+    margin: 0px 124px 64px 124px;
+}
+    form{
+    display: block;
+    width: 413px;
+    height: 780px;
+}
+    .send label{
+    font: 400 16px/30px 'Roboto';
+    margin: 32px 0px 7px;
+}
+    .send button{
+    width: 412px;
+    height: 70px;
+    margin-top: 70px;
+}
+    .navigator {
+    width: 100%;
+    height: 392px;
+    margin-bottom: 64px;
+    background-size: cover;
+}
+}
+
+@media screen and (max-width:767px) {
+    
+    .container {
+        margin: 0px 16px;
+    }
+    header {
+        height: 80px;
+    }
+    header .container {
+        padding: 16px 0;
+    }
+    main {
+        margin-top: -80px;
+    }
+    .container1 {
+        height: 376px;
+    }
+    .container1 .container{
+        height: 245px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 92px 16px 16px;
+        margin: 0px;
+        background: none;
+    }     
+    main  h1{
+        width: 343px;
+        height: 76px;
+        font: normal 300 32px/38px 'Roboto';
+        text-align: center;
+        letter-spacing: 0.04em;
+        margin: 0px 16px 12px 16px;
+}
+    main p {
+        width: 343px;
+        height: 96px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        margin: 12px 16px 32px 16px;
+}
+    main h2 {
+        width: 350px;
+        height: 55px;
+        font: normal 300 24px/28px 'Roboto';
+        text-align: center;
+        margin-left: 200px;
+}
+    main button {
+        width: 107px;
+        height: 27px;
+        font: normal 400 12px/26px 'Roboto';    
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 45px;
+}
+    .container2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+    .threephoto {
+    width: 336px;
+    height: 451px;
+} 
+    .container2 p {
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+    font: normal 400 16px/26px 'Roboto';
+    text-align: left;
+    margin: 12px 0px;
+}
+    .threephoto>div {
+    width: 275px;
+    height: 215px;
+    padding: 30px;
+}
+    .man1 {
+    margin: 35px 105px 0px 60px;
+}
+    .man2 {
+     margin: 35px 105px 0px 96px;
+}
+    .girl {
+    margin: 35px 105px 0px 68px;
+}
+    .container3 h2{
+    margin-top: 64px;     
+}
+    .cont3 {
+    width: 343px;
+    height: 104px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin: 32px 0px 82px 150px;
+    padding-left: 50px;
+}
+    .grid {
+    display: grid;
+    gap: 32px;
+    margin-bottom: 112px;
+    justify-content: center;
+    grid-template-areas: "m1" "m2" "m3";
+}
+    .mask1 p {
+    font: normal 400 16px/19px 'Roboto';
+    margin: 16px 16px 0px 0px;
+   }
+    .mask1 {
+    width: 343px;
+    height: 144px;
+    border-radius: 10px;
+    grid-area: m1;
+}
+    .mask2 p {
+    font: normal 400 16px/19px 'Roboto';
+    margin: 26px 0px 0px 16px;
+}
+    .mask2 {
+    width: 343px;
+    height: 255px;
+    border-radius: 10px;
+    grid-area: m2;
+}
+    .mask3 {
+    width: 343px;
+    height: 262px;
+    border-radius: 10px;
+    grid-area: m3;
+    
+}
+    .mask3 p {
+    font: normal 400 16px/19px 'Roboto';
+    margin: 16px 0px 0px 18px;
+}   
+     footer {
+        height: 553px;
+    }
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        padding: 18px 0 40px;
+    }
+    footer button {
+        order: 1;
+        float: none;
+        width: 108px;
+        margin: 33px auto 0;
+    }
+    footer h2 {
+        width: auto;
+        text-align: center;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        margin: 0 0 27px;
+    }
+    footer p {
+        width: auto;
+        text-align: center;
+    }
+    ol {
+        margin: 14px 0 11px 22px;
+    }
+    ol li {
+        line-height: 19px;
+    }
+    ol li::before {
+        height: 20px;
+        width: 20px;
+    }
+ 
+     /*contact us*/
+    
+    .start {
+    height: 333px;
+    background-size: cover;
+    margin-bottom: 45px;
+}
+    .start h2 {
+    width: 163px;
+    height: 28px;
+    font: normal 500 24px/28px 'Roboto';
+    margin: 149px 106px 32px 106px;
+}
+    .start p {
+    width: 341px;
+    height: 81px;
+    font: 300 16px/30px 'Roboto';
+}
+    .contact {
+    display: grid;
+    gap: 32px;
+    height: 1250px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a" "s";
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 32px;
+}
+    .address {
+    width: 299px;
+    height: 612px;
+    grid-area: a;
+    margin-left: 0px;
+}
+    .address h3 {                        
+    margin: 12px 0px 12px 0px;
+}
+
+    .address p {
+    margin: 12px 0px 12px 0px;
+    text-align:left;
+}
+    main .send {
+    width: 342px;
+    height: 514px;
+    padding: 0px 17px 0px;
+    grid-area: s;
+    margin: 0px 17px 32px 17px;
+}
+    form {
+    display: block;
+    width: 272px;
+    height: 450px;
+}
+
+    .send h3 {
+    font: 500 16px/30px 'Roboto';
+    text-align: left;
+    margin: 36px 0px 16px 0px;
+} 
+    .send label {
+    font: 400 14px/30px 'Roboto';
+    margin: 0px;
+}
+    .send .text {
+    display: block;
+    width: 271px;
+    height: 46px;
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    padding: 13px 26px;
+    border-radius: 10px;
+    font: 300 14px/30px 'Roboto';
+    margin-left: 17px;
+}
+    .send .message {
+    width: 271px;
+    height: 116px;
+    padding: 13px 24px;
+    font: 300 14px/30px 'Roboto';
+    margin-left: 17px;
+}
+    .send button {
+    width: 271px;
+    height: 46px;
+    margin-top: 46px;
+    margin-left: 17px;
+}
+    main .navigator {
+    width: 100%;
+    height: 349px;
+    margin-bottom: 32px;
+    background-size: cover;
+}
+}
