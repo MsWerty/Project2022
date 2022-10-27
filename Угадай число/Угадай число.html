@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Угадай число</title>
+        
+        <style>
+            #block1 {
+                display: block;
+                height: 330px;
+                width: 600px;
+                text-align: center;
+                background: #AFEEEE;
+                border-radius: 50px;
+                border: 5px groove #00008B;
+                margin: 50px 150px;
+            }
+            #block2 {
+                display: none;
+                height: 330px;
+                width: 600px;
+                text-align: center;
+                background: linear-gradient(to bottom, #b7deed, #71ceef, #21b4e2, #b7deed);
+                border-radius: 50px;
+                border: 5px groove #4682B4;
+                margin: 50px 150px;
+            }
+            div h1{
+                margin-left: 270px;
+            }
+            #start {
+                font-size: 30px;
+            }
+            #knopka1 {
+                margin-top: 30px;
+                width: 150px;
+                height: 50px;
+                background-color: #6A5ACD;
+                border-radius: 10px; 
+                font-size: 20px;
+            }
+            #knopka2 {
+                margin-top: 20px;
+                width: 150px;
+                height: 50px;
+                background-color: #7FFFD4;
+                border-radius: 10px; 
+                font-size: 20px;
+            }
+            #number {
+                font-size: 30px;
+            }
+            #schet {
+                font-size: 20px;
+            }
+            #answer {
+                width: 150px;
+                height: 30px;
+                border-radius: 10px; 
+                font-size: 20px;
+            }
+            #sms {
+                font-size: 20px;
+                color: #FF0000;
+            }
+        </style>
+        </head>
+                 
+        <body>
+            <div class="part">
+                <h1>Игра "Угадай число!"</h1>
+                    <div id="block1">
+                        <p id="start">Для начала игры нажмите на кнопку!</p>
+                        <button id="knopka1">Начать игру</button>
+                    </div>
+                <div id="block2">
+                    <p id="number">Введите число от 1 до 100!</p>
+                    <input type="text" id="answer">
+                    <p id="sms"></p>
+                    <button id="knopka2">OK</button>
+                    <p id="schet"></p>
+                </div>
+            </div>
+        
+        <script>
+        let counter = 0;
+        let random = Math.floor(Math.random() * 100 +1);
+        let block1 = document.getElementById('block1');
+        let block2 = document.getElementById('block2');
+        let start = document.getElementById('start');
+        let numb = document.getElementById('number');
+        let ans = document.getElementById('answer');
+        let help = document.getElementById('sms');
+        let button1 = document.getElementById('knopka1');
+        let button2 = document.getElementById('knopka2');
+        
+        document.getElementById('knopka1').onclick = function(){
+            random = Math.floor(Math.random() * 100 +1);
+            document.getElementById('block1').style.display = "none";
+            document.getElementById('block2').style.display = "inline-block";
+                        
+            counter = 0;
+            document.getElementById('schet').innerHTML = "Количество попыток: " + counter;
+        }
+      
+        document.getElementById('knopka2').onclick = function(){
+        
+            counter++;
+
+					if (isNaN(ans.value)) { 
+						document.getElementById('sms').innerHTML = 'Надо ввести число!';
+					}
+					else if (ans.value == random) {
+						document.getElementById('start').innerHTML = "Поздравляем, Вы угадали число с " + counter + " попыток. Сыграем еще раз?";
+                        document.getElementById('block1').style.display = "inline-block";
+                        document.getElementById('block2').style.display = "none";
+				
+					}
+					else if (ans.value > random) {
+						document.getElementById('sms').innerHTML = 'Надо число меньше!';
+						document.getElementById('schet').innerHTML = "Количество попыток: " + counter;
+					}
+					else  {
+						document.getElementById('sms').innerHTML = 'Надо число больше!';
+						document.getElementById('schet').innerHTML = "Количество попыток: " + counter;
+					}
+				
+				}
+       
+        </script>
+        
+    </body>
+</html>
